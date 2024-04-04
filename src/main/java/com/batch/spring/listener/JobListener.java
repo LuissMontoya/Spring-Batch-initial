@@ -29,11 +29,9 @@ public class JobListener extends JobExecutionListenerSupport {
 		if(jobExecution.getStatus() == BatchStatus.COMPLETED) {
 			log.info("############  FINALIZÓ EL JOB ##############");
 			
-			jdbcTemplate.query("SELECT primer_nombre, segundo_nombre, telefono From persona"
-					, (rs,rw) -> new Persona(rs.getString(1),rs.getString(2),rs.getString(3)))
-							.forEach(persona -> log.info("Registro < "+ persona+" >"));
+			List<Persona> personas = jdbcTemplate.query("SELECT primer_nombre, segundo_nombre, telefono FROM persona",
+	                (rs, rowNum) -> new Persona(rs.getString(1), rs.getString(2), rs.getString(3)));
 		}
-		//super.afterJob(jobExecution);
 	}
 	
 }
