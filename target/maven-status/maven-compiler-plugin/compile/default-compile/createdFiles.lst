@@ -1,0 +1,6 @@
+com\batch\spring\Application.class
+com\batch\spring\listener\JobListener.class
+com\batch\spring\BatchConfiguration$1.class
+com\batch\spring\model\Persona.class
+com\batch\spring\BatchConfiguration.class
+com\batch\spring\procesor\PersonaItemProcessor.class
