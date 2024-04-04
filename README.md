@@ -1,1 +1,1 @@
-bulk upload (csv) using in memory db with spring batch
+bulk upload (csv) using Oracle db with spring batch
